@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AccioJob</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      href="data:image/png;base64,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"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="nav_section">
+      <div class="main_nav">
+        <div class="left_side">
+          <img src="./image/Final Logo.png" alt="acciologo" />
+          <h3>AccioJob</h3>
+          <img
+            src="./image/NSDC_Logo_in_clear_background 1.png"
+            alt="NSDClogo"
+          />
+        </div>
+        <div class="right_side">
+          <p>Cources</p>
+          <i class="down_arw fa-solid fa-angle-down"></i>
+
+          <p>Acciojob Reviews</p>
+          <p>Scolarship Test</p>
+
+          <p>More</p>
+          <i class="down_arw fa-solid fa-angle-down"></i>
+
+          <button type="button" class="btn btn-outline-primary">Login</button>
+        </div>
+      </div>
+      <div class="nav_lower">
+        <p>
+          Next batch starts in
+          <i class="fa-solid fa-hourglass-end"></i> 22Days,Hurry!
+        </p>
+      </div>
+    </nav>
+    <section>
+      <div class="hero_section">
+        <div class="hero_left_content">
+          <h2>
+            Lunch your carrier with our <br>
+            <span>full Stack Devloper</span>Courses
+          </h2>
+          <p>
+            Curriculam designed and taught by Alumini from IIT s&Leading Tech
+            Companies.
+          </p>
+          <div class="Advertisement">
+            <div class="about_advertisment">
+              <div class="img">
+                <img src="./image/medel.png" alt="img" />
+              </div>
+              <div class="about">
+                <h4>41 Lakhs</h4>
+                <p>Highest Salary</p>
+              </div>
+            </div>
+            <div class="about_advertisment">
+              <div class="img">
+                <img src="./image/Group 48097590.png" alt="img" />
+              </div>
+              <div class="about">
+                <h4>300+</h4>
+                <p>Patner Companies</p>
+              </div>
+            </div>
+
+            <div class="about_advertisment">
+              <div class="img">
+                <img src="./image/Vector.png" alt="img" />
+              </div>
+              <div class="about">
+                <h4>100%</h4>
+                <p>Job Guarantee</p>
+              </div>
+            </div>
+            <div class="about_advertisment">
+              <div class="img">
+                <img src="./image/Group 48097589.png" alt="img" />
+              </div>
+              <div class="about">
+                <h4>8.3 LPA</h4>
+                <p>Average Salary</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="love_section">
+          <div class="love">
+            <p>Made with &#x1F499 by an Acciojob Student</p>
+          </div>
+        </div>
+        </div>
+        <div class="hero_right_content">
+              <form class="card">
+                <h3>Start Attending Live <br> Classes For Free!</h3>
+                <p>Live lectures & Assignments curated by <br>Top Tech Proffesionals</p>
+                <div class="p-3">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" placeholder="Archana Bai"  >
+                </div>
+                 <div class="p-3">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" placeholder="Phone Number">
+                 </div>
+                  <div >
+                    <button class="Button">Apply Now For Free</button>
+                  </div>
+                  <div class="term_condition">
+                    <p>By clicking 'Apply now' You agree to our <br><span>Term & Conditions</span></p>
+                  </div>
+              </form>
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="second_dv">
+           <div class="heading_content">
+            <div class="cont">
+            <h4>LEARN FULL-STACK WEB DEVLOPMENT</h4>
+            <P>OUR COURCES</P>
+            </div>
+           </div>
+           <div class="card_container">
+             <div class="left_card">
+                <div class="upper_text">
+                  <div class="img_text">
+                    <img src="./image/tree.png" alt="tree">
+                    <h5>Beginner</h5>
+                  </div>
+                </div>
+                <div class="about_course">
+                    <div class="about_course_content">
+                        100% Job Guarantee
+                    </div>
+                    <div class="about_course_content">
+                        Lifetime Access 
+                    </div>
+                </div>
+                <div class="about_course_para">
+                  <p>For you to start their coding journey from scratch</p>
+                </div>
+                <div class="table_card">
+                    <table class="table " >
+                        <tr>
+                            <td><img src="./image/bag.png" alt="img">   Placement Starts</td>
+                            <td>In 4 Months </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/cap.png" alt="cap">  Eligibility</td>
+                            <td>Final year students or<br> Graduates, All degrees</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/timer.png" alt="timer">  Duration</td>
+                            <td> 12 Months</td>
+                        </tr>
+                         <tr>
+                          <td><img src="./image/book.png" alt="book">Daily Efforts</td>
+                          <td>5-7 hours</td>
+                         </tr>
+                         <tr>
+                          <td><img src="./image/playbutton.png" alt="playbutton">Next Batch On</td>
+                          <td>27th Dec 2022</td>
+                         </tr>
+                    </table>
+                    <div class="botm">
+                    <button class="left_button"> <img src="./image/arrowmark.png" alt="arw">Brochure</button>
+                    <button class="right_button">Learn More <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+             </div>
+             <div class="right_card">
+              
+                <div class="upper_text">
+                  <div class="img_text">
+                    <img src="./image/boxarw.png" alt="box">
+                    <h5>Intermediate</h5>
+                  </div>
+                </div>
+                <div class="about_course_right">
+                    <div class="about_course_content_right">
+                        Pay After Placement
+                    </div>
+                    <div class="about_course_content_right">
+                        Lifetime Access 
+                    </div>
+                </div>
+                <div class="about_course_para">
+                  <p>For learners with good aptitude & logical reasoning</p>
+                </div>
+                <div class="table_card">
+                    <table class="table " >
+                        <tr>
+                            <td><img src="./image/bag.png" alt="img">   Placement Starts</td>
+                            <td>In 6 Months </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/cap.png" alt="cap">  Eligibility</td>
+                            <td>2019-2023 Batch<br> students, All Degrees </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/timer.png" alt="timer">  Duration</td>
+                            <td>10 Months</td>
+                        </tr>
+                         <tr>
+                          <td><img src="./image/book.png" alt="book">Daily Efforts</td>
+                          <td>8-10 hours</td>
+                         </tr>
+                         <tr>
+                          <td><img src="./image/playbutton.png" alt="playbutton">Next Batch On</td>
+                          <td>27th Dec 2022</td>
+                         </tr>
+                    </table>
+                    <div class="botm">
+                    <button class="left_button"> <img src="./image/arrowmark.png" alt="arw">Brochure</button>
+                    <button class="right_button">Learn More <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+             
+           </div>
+        </div>
+    </section>
+    <section >
+      <div class="image_container">
+        <div class="txt_container">
+          <div class="text_heading">
+            <p>Over 300+ hiring partners</p>
+            <h4>Top Startups & MNC’s Hirebr <br> <span>Software Engineer</span></h4>
+            <h6>From AccioJob upto 41 Lakhs</h6>
+          </div>
+        </div>
+        <div class="only_image">
+          <div class="company_image">
+            <img src="./image/Walmart.png" alt="walmart">
+            <img src="./image/amazon.png" alt="amazon">
+            <img src="./image/bhrt.png" alt="bharat">
+            <img src="./image/msk.png" alt="mask">
+            <img src="./image/make.png" alt="make">
+            <img src="./image/pay.png" alt="paytm">
+          </div>
+          <div class="company_image">
+            <img src="./image/thouight.png" alt="thou">
+            <img src="./image/tata.png" alt="tata">
+            <img src="./image/innova.png" alt="inno">
+            <img src="./image/free.png" alt="free">
+            <img src="./image/public.png" alt="public">
+            <img src="./image/Hsbc.png" alt="bank">
+          </div>
+          <div class="company_image">
+             <img src="./image/mini.png" alt="mini">
+             <img src="./image/pay.png" alt="paygl">
+             <img src="./image/myst.png" alt="mystl">
+             <img src="./image/converj.png" alt="convj">
+             <img src="./image/park.png" alt="park">
+             <img src="./image/can.png" alt="can">
+          </div>
+        </div>
+        <div class="btm">
+          <button class="lower_btm">Placement Report <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="footer">
+        <div class="txt_container">
+          <div class="text_heading">
+           <h4>AccioJob Wall Of Love</h4>
+            Our Alumni Say it Best
+          </div>
+        </div>
+        <div class="footer_card">
+          <div class="image_card">
+            <div class="img_heading">
+              
+              <img src="./image/virat.png" alt="virat">
+            
+              <div class="img_contain">
+               <h5>Virat Kohil</h5>
+               <p>SDE-II at Indian Cricket Board</p>
+              </div>
+              <div>
+              <img src="./image/LinkedIN (1).png" alt="">
+            </div>
+            </div>
+            <div class="text_contain">
+                <p>
+                  My Life changed when I became a part of the <br>
+                  AccioJob family. Before that I was not able to <br>
+                   score any centuries. As soon as I joined Accio, <br>
+                      I hit a century against Afganistan.
+                </p>
+            </div>
+            <div>
+              Jun 14, 2022
+            </div>
+            <div class="image_card2">
+              <div class="img_heading">
+                
+                <img src="./image/ishan.png" alt="ishan">
+              
+                <div class="img_contain">
+                 <h5>Ishan Kishan</h5>
+                 <p>Intern at Indian Cricket Board</p>
+                </div>
+                <div>
+                <img src="./image/Quora.png" alt="quora">
+              </div>
+              </div>
+              <div class="text_contain">
+                  <p>
+                    My Life changed when I became a part of the <br>
+                    AccioJob family. Before that I was not able to <br>
+                    score any centuries. As soon as I joined Accio, <br>
+                    I hit a century against Afg anistan. My Life changed <br>
+                     when I became a part of the AccioJob family. <br>
+                     Before that I was not able to score any centuries.<br>
+                      As soon as I joined Accio, I hit a century against <br> Afganistan.
+                  </p>
+              </div>
+              <div>
+                Jun 14, 2022
+              </div>
+              <div class="image_card3">
+                <div class="img_heading">
+                  
+                  <img src="./image/virendra.png" alt="viru">
+                
+                  <div class="img_contain">
+                   <h5>Virendra Sehwag</h5>
+                   <p>SDE-IV at Indian Cricket Board</p>
+                  </div>
+                  <div>
+                  <img src="./image/LinkedIN (1).png" alt="">
+                </div>
+                </div>
+                <div class="text_contain">
+                    <p>
+                      My Life changed when I became a part of the <br>
+                      AccioJob family. Before that I was not able to <br>
+                     score any centuries. As soon as I joined Accio, <br>
+                      I hit a century against Afganistan. Then I got  <br>
+                      offers from RCB for IPL as captain again. Bas <br>
+                      ab India World Cup Jeet jaye.
+                    </p>
+                </div>
+                <div>
+                  Jun 24, 2022
+                </div>
+                <div class="image_card4">
+                  <div class="img_heading">
+                    
+                    <img src="./image/rohit.png" alt="rohit">
+                  
+                    <div class="img_contain">
+                     <h5>Rohit Sharma</h5>
+                     <p>SDE-II at Indian Cricket Board</p>
+                    </div>
+                    <div>
+                    <img src="./image/LinkedIN (1).png" alt="">
+                  </div>
+                  </div>
+                  <div class="text_contain">
+                      <p>
+                        My Life changed when I became a part of the <br>
+                      AccioJob family. Before that I was not able to <br>
+                     score any centuries. As soon as I joined Accio, <br>
+                      I hit a century against Afganistan. Then I got  <br>
+                      offers from RCB for IPL as captain again. Bas <br>
+                      ab India World Cup Jeet jaye.
+                      </p>
+                  </div>
+                  <div>
+                    Jun 14, 2022
+                  </div>
+                  <div class="image_card5">
+                    <div class="img_heading">
+                      
+                      <img src="./image/sarfaraz.png" alt="sarfaraz">
+                    
+                      <div class="img_contain">
+                       <h5>Sarfaraz Ahmed</h5>
+                       <p>WK at Pak. Cricket Board</p>
+                      </div>
+                      <div>
+                      <img src="./image/LinkedIN (1).png" alt="">
+                    </div>
+                    </div>
+                    <div class="text_contain">
+                        <p>
+                          Inshallah Boys Played well. My answer also same <br>
+                          Inshallah Boys! Well done!
+                        </p>
+                    </div>
+                    <div>
+                      Jun 14, 2022
+                    </div>
+                    <div class="image_card6">
+                      <div class="img_heading">
+                        
+                        <img src="./image/virat.png" alt="virat">
+                      
+                        <div class="img_contain">
+                         <h5>Sachin Tendulkar</h5>
+                         <p>SDE-II at Indian Cricket Board</p>
+                        </div>
+                        <div>
+                        <img src="./image/LinkedIN (1).png" alt="">
+                      </div>
+                      </div>
+                      <div class="text_contain">
+                          <p>
+                            My Life changed when I became a part of the <br>
+                            AccioJob family. Before that I was not able to <br>
+                             score any centuries. As soon as I joined Accio, <br>
+                                I hit a century against Afganistan.
+                          </p>
+                      </div>
+                      <div>
+                        Jun 14, 2022
+                      </div>
+        </div>
+          
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
