@@ -326,46 +326,125 @@ padding:20px ;
 ::-webkit-scrollbar {
   display: none;
 }
-
-.image_card{
-  height: 261px;
-  width: 398px;
-  
+.footer-section {
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+   font-style: italic;
 }
-.image_card2{
+.my-alumini {
+  height: 590px;
+  width: 1200px;
+  font-style: italic;
+}
+.alumini-1 {
+  height: 260px;
+  width: 398px;
+  border: 1px solid black;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px;
+   margin-right: 10px;
+}
+.alumini-2 {
   height: 357px;
   width: 398px;
-  
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+ 
 }
-.image_card3{
-  height: 309px;
+.alumini-3 {
   width: 398px;
-  
+  height: 309px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 10px;
 }
-.image_card4{
-  height: 228px;
-  width: 350px;
-  border: 1px solid gray;
+.alumini-4 {
+  width: 398px;
+  height: 309px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: -85px;
 }
-.image_card5{
+.alumini-5 {
   height: 213px;
   width: 398px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 10px;
+
 }
-.image_card6{
+.alumini-6 {
   height: 261px;
   width: 398px;
-}
-.img_contain>h5{
-  font-family: "ABeeZee", sans-serif;
-}
-
-.footer_card{
+  border: 1px solid black;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  width: 90%;
-  margin: auto;
+  padding: 20px;
+  margin-top: -38px;
+}
+.my-alumini-row-1 {
+  display: flex;
+}
+.my-alumini-row-2 {
+  display: flex;
+}
+.alumini-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+.small-size{
+    font-size: 12px;
+    color: #969696;
+}
+.small-width{
+    width: 75%;
+}
+.alumini-text{
+    margin-left:-90px
+}
+.alumini-1,.alumini-2,.alumini-3,.alumini-4,.alumini-5,.alumini-6{
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #D7D7D7;
+}
+.some{
+     font-style: italic;
+    margin-bottom: 50px;
+}
+.some-1{
+  font-size: 40px;
+}
+.some-2{
+    text-align: center;
 }
 
+.nav_section{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+}
 
 
 
